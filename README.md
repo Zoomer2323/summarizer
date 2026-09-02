@@ -63,7 +63,7 @@ validates the parsed `{summary, tags}` shape. On success it writes a row to SQLi
 adds it to the list and can select it for the detail view. `GET /entries` and `GET /entries/{id}` read straight
 from SQLite.
 
-**2. AI choice.** Google Gemini (`gemini-2.5-flash-lite`), called directly via the REST API with `requests`
+**2. AI choice.** Google Gemini (`gemini-3.5-flash-lite`), called directly via the REST API with `requests`
 (no SDK). It's fast and inexpensive for a short summarization + tagging task, and its structured-output mode
 (`responseSchema`) lets us constrain the JSON shape directly instead of hoping the model behaves.
 
