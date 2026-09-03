@@ -10,8 +10,6 @@ SQLite and shown in a list/detail UI.
 
 ![Working end-to-end flow](screenshot.png)
 
-_(Add `screenshot.png` here showing a submitted entry with its generated summary and tags before submitting.)_
-
 ## Setup
 
 ### Backend
