@@ -72,8 +72,9 @@ JSON missing a summary or with anything other than exactly 3 tags, the backend r
 and the API responds `502` with a readable message — nothing is written to the database. The frontend surfaces
 that message inline instead of crashing.
 
-**4. Privacy.** Only the submitted text is sent to Gemini (in the prompt), plus the API key as a query parameter
-over HTTPS. In a financial-services setting we'd avoid sending anything containing account numbers, PII, or
+**4. Privacy.** Only the submitted text is sent to Gemini (in the prompt); the API key is sent via the
+`x-goog-api-key` HTTP header, not a query parameter, over HTTPS. In a financial-services setting we'd avoid
+sending anything containing account numbers, PII, or
 other regulated customer data unless the provider has a signed data-processing/BAA-equivalent agreement and the
 text is scrubbed/redacted first; today this prototype has no redaction step.
 
